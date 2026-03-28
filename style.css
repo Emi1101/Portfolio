@@ -1,87 +1,26 @@
-/*
+/* Allgemein */
 body {
     margin: 0;
     background-color: #F6EAEA;
-    overflow: hidden;
+    font-family: "Kannada MN", serif;
+    color: #3a3333;
 }
 
-.scene {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.scene img {
-    position: absolute;
-}
-
-.regal {
-    width: 380px;
-    left: 80px;
-    bottom: 235px;
-    z-index: 2;
-}
-
-.pflanze {
-    width: 100px;
-    top: 50px;
-    left: 30%;
-    z-index: 4;
-}
-
-.pinnwand {
-    width: 400px;
-    right: 150px;
-    top: 75px;
-    z-index: 1;
-}
-
-.lebenslauf {
-    width: 90px;
-    right: 420px;
-    top: 100px;
-    z-index: 3;
-}
-
-.uni {
-    width: 200px;
-    right: 170px;
-    top: 235px;
-    z-index: 3;
-}
-
-.screen {
-    width: 310px;
-    left: 45%;
-    bottom: 220px;
-    z-index: 2;
-}
-
-.line {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 59%;
-    height: 2px;
-    background-color: #3a3333;
-    z-index: 0;
-}
-
-.tisch {
-    position: absolute;
-    left: 590px;
-    right: 430px;
-    bottom: 213px;
-    height: 8px;
-    background-color: rgba(113, 76, 57, 0.6);
-    border-radius: 10px;
-    z-index: 1;
-}
-*/
-body {
+h1, h2, p {
     margin: 0;
-    background-color: #F6EAEA;
+}
+
+a {
+    color: rgba(114, 28, 138, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main-Page*/
+.home {
     overflow: hidden;
 }
 
@@ -176,4 +115,122 @@ body {
     background-color: rgba(113, 76, 57, 0.6);
     border-radius: 10px;
     z-index: 1;
+}
+
+/* Lebenslauf-Seite */
+.lebenslauf-seite {
+    overflow-x: hidden;
+}
+
+.lebenslauf-seite h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Header */
+.header-lebenslauf {
+    text-align: center;
+    padding: 50px 20px 70px;
+}
+
+.header-lebenslauf h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.header-lebenslauf p {
+    font-size: 1.1rem;
+}
+
+/* Oberer Bereich */
+.container-oben {
+    width: min(1100px, 90%);
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Gemeinsamer Kartenstil */
+.karte {
+    background-color: rgba(250, 255, 214, 0.76);
+    border-radius: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Linke Karte */
+.kontaktdaten {
+    flex: 1;
+}
+
+.kontakt-zeile {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(58, 51, 51, 0.12);
+}
+
+.kontakt-zeile:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.kontaktdaten address {
+    font-style: normal;
+}
+
+/* Rechte Karte */
+.profil-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profil-box img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.profil-box p {
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+/* Bildung */
+.bildung {
+    width: min(1100px, 90%);
+    margin: 0 auto 40px;
+    background-color: rgba(250, 255, 214, 0.76);
+    border-radius: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+    .container-oben {
+        flex-direction: column;
+    }
+
+    .kontakt-zeile {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .label {
+        min-width: unset;
+    }
 }
