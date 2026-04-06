@@ -1,9 +1,11 @@
 /* Allgemein */
+
 body {
     margin: 0;
     background-color: #F6EAEA;
     font-family: "Kannada MN", serif;
     color: #3a3333;
+    line-height: 1.6;
 }
 
 h1,
@@ -24,10 +26,11 @@ a:hover {
 /* Footer */
 footer {
     text-align: center;
-background-color: #8E5EA2;
-color: white;
-        padding: 20px;
-    margin-top: 40px;
+    background-color: #8E5EA2;
+    color: white;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 1rem;
 }
 
 
@@ -173,13 +176,13 @@ color: white;
 }
 
 /* Gemeinsamer Boxstil */
+
 .box {
     background-color: #EEF5E9;
     border-radius: 25px;
     padding: 25px;
-    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
-
 /* Linke Karte */
 .kontaktdaten {
     flex: 1;
@@ -296,19 +299,225 @@ color: white;
 }
 
 .header-uni {
-        width: min(1100px, 90%);
-    margin: 0 auto 40px;
+    width: min(1100px, 90%);
+    margin: 80px auto 60px;
     display: flex;
-    gap: 30px;
-    align-items: stretch;
+    align-items: center;
+    gap: 60px;
+}
+
+.header-uni img {
+    width: 350px;
+    border-radius: 10px;
 }
 
 .header-uni h1 {
-    margin-top: 100px;
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 0;
 }
 
+.uni-beschreibung {
+    width: min(1100px, 90%);
+    margin: 0 auto 80px;
+    font-size: 1.1rem;
+}
 
+.module {
+    width: min(1100px, 90%);
+    margin: 100px auto 80px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
 
+.module h2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.module p {
+    flex: 1;
+}
+
+.module div {
+    flex: 1;
+}
+
+.module img {
+    flex: 1.5;        /* 👉 Bild bekommt mehr Platz */
+    max-width: 600px; /* 👉 maximale Größe */
+    width: 100%;
+    border-radius: 10px;
+}
+
+.uni-fotos {
+    width: min(1100px, 90%);
+    margin: 150px auto 80px;
+
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;      /* 👉 Scroll aktivieren */
+    padding-bottom: 10px;  /* Platz für Scrollbar */
+}
+
+.uni-fotos img {
+    flex: 0 0 auto;   /* 👉 verhindert schrumpfen */
+    width: 300px;     /* feste Breite */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Persönliches-Seite */
+.persoenlich-seite {
+    overflow-x: hidden;
+}
+
+.header-persoenlich {
+    width: min(1100px, 90%);
+    margin: 50px auto 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-persoenlich h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.header-persoenlich img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    background-color: white;
+}
+
+.persoenlich-einleitung {
+    width: min(900px, 90%);
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.persoenlich-einleitung p {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+}
+
+.persoenlich-box {
+    width: min(1100px, 90%);
+    margin: 0 auto 40px;
+    background-color: #EEF5E9;
+    border-radius: 25px;
+    padding: 38px 30px;
+}
+
+.persoenlich-box h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.hobbies-box h2 {
+    font-size: 1.9rem;
+}
+
+.hobby-block {
+    margin-bottom: 28px;
+}
+
+.hobby-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.hobby-block p {
+    font-size: 1.05rem;
+    max-width: 900px;
+}
+
+.sonstiges {
+    margin-top: 35px;
+    font-size: 1.05rem;
+}
+
+.programmieren-box h2 {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.3;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 40px;
+    align-items: center;
+}
+
+.story-text p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    border-radius: 6px;
+}
+
+.story-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .header-persoenlich {
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .header-persoenlich img {
+        position: static;
+        margin-left: 20px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .header-persoenlich {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .persoenlich-box {
+        padding: 28px 20px;
+    }
+
+    .persoenlich-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .hobby-block h3 {
+        font-size: 1.25rem;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image img {
+        max-width: 100%;
+    }
+}
 /* Responsive */
 @media (max-width: 800px) {
     .container-oben {
@@ -331,5 +540,18 @@ color: white;
     .skills-icons {
         grid-template-columns: repeat(3, 80px);
         gap: 20px;
+    }
+
+        .header-uni {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .module {
+        flex-direction: column;
+    }
+
+    .module img {
+        max-width: 100%;
     }
 }
