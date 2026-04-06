@@ -54,6 +54,81 @@ footer {
     aspect-ratio: 1200 / 700;
 }
 
+/* Menü oben rechts */
+.menu-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1000;
+}
+
+.menu-button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 14px;
+    background-color: rgba(142, 94, 162, 0.92);
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: translateY(-1px);
+    background-color: rgba(126, 79, 146, 0.96);
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 68px;
+    right: 0;
+    min-width: 220px;
+    padding: 10px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.menu-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-dropdown a {
+    text-decoration: none;
+    color: #3a3333;
+    padding: 12px 14px;
+    font-size: 1.05rem;
+    display: block;
+        transition: background-color 0.2s ease;
+
+}
+
+/* 👉 Linie zwischen den Links */
+.menu-dropdown a:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu-dropdown a:hover {
+    background-color: rgba(142, 94, 162, 0.10);
+}
+
 /* alle Bilder */
 .scene img {
     position: absolute;
@@ -62,11 +137,20 @@ footer {
     display: block;
 }
 
+.klick {
+    transition: transform 0.3s ease;
+}
+
+.klick:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 /* Regal */
 .regal {
-    width: 31%;
-    left: 4%;
-    bottom: 29%;
+    width: 29%;
+    left: 1%;
+    bottom: 32%;
     z-index: 2;
 }
 

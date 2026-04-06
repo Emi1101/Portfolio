@@ -9,19 +9,59 @@
 </head>
 
 <body class="home">
-    <div class="container">
-    <div class="scene">
-        <div class="line"></div>
-        <div class="tisch"></div>
+<div class="menu-container">
+    <button class="menu-button" id="menuButton" aria-label="Menü öffnen">
+        ☰
+    </button>
 
-        <a href="./persöhnlich.html"><img src="./images/Regal.png" class="regal" alt="Regal"></a>
-        <img src="./images/Pflanzen_Wand.png" class="pflanze" alt="Pflanze">
-        <img src="./images/Pinnwand_Notiz.png" class="pinnwand" alt="Pinnwand">
-        <a href="./lebenslauf.html"><img src="./images/Lebenslauf_bild.png" class="lebenslauf" alt="Lebenslauf"></a>
-        <a href="./uni.html"><img src="./images/Uni.png" class="uni" alt="Uni"></a>
-        <img src="./images/Bildschrim.png" class="screen" alt="Bildschirm">
+    <div class="menu-dropdown" id="menuDropdown">
+        <a href="./lebenslauf.html">Lebenslauf</a>
+        <a href="./uni.html">Meine Hochschule</a>
+        <a href="./persönlich.html">Persönliches</a>
     </div>
+</div>
+
+    <div class="container">
+        <div class="scene">
+            <div class="line"></div>
+            <div class="tisch"></div>
+
+            <a href="./persöhnlich.html">
+                <img src="./images/regal2.png" class="regal klick" alt="Regal">
+            </a>
+
+            <img src="./images/Pflanzen_Wand.png" class="pflanze" alt="Pflanze">
+            <img src="./images/Pinnwand_Notiz.png" class="pinnwand" alt="Pinnwand">
+
+            <a href="./lebenslauf.html">
+                <img src="./images/Lebenslauf_bild.png" class="lebenslauf klick" alt="Lebenslauf">
+            </a>
+
+            <a href="./uni.html">
+                <img src="./images/Uni.png" class="uni klick" alt="Uni">
+            </a>
+
+            <img src="./images/Bildschrim.png" class="screen" alt="Bildschirm">
+        </div>
     </div>
+<script>
+    const menuButton = document.getElementById("menuButton");
+    const menuDropdown = document.getElementById("menuDropdown");
+
+    menuButton.addEventListener("click", () => {
+        menuDropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (event) => {
+        const isClickInside = document.querySelector(".menu-container").contains(event.target);
+
+        if (!isClickInside) {
+            menuDropdown.classList.remove("open");
+        }
+    });
+</script>
 </body>
+
+
 
 </html>
