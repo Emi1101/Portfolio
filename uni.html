@@ -10,16 +10,16 @@
 
 <body>
     <div class="menu-container">
-    <button class="menu-button" id="menuButton" aria-label="Menü öffnen">
-        ☰
-    </button>
+        <button class="menu-button" id="menuButton" aria-label="Menü öffnen">
+            ☰
+        </button>
 
-    <div class="menu-dropdown" id="menuDropdown">
-        <a href="./index.html">Startseite</a>
-        <a href="./lebenslauf.html">Lebenslauf</a>
-        <a href="./persönlich.html">Persönliches</a>
+        <div class="menu-dropdown" id="menuDropdown">
+            <a href="./index.html">Startseite</a>
+            <a href="./lebenslauf.html">Lebenslauf</a>
+            <a href="./persoenlich.html">Persönliches</a>
+        </div>
     </div>
-</div>
     <header class="header-uni">
         <img src="./images/Uni.png">
         <h1>Meine wunderschöne <br>
@@ -33,42 +33,47 @@
 
     <section class="module">
         <div>
-        <h2>Unser Modulplan:</h2>
-        
-        <p>Im Rahmen des <b>Startprojekts</b> entwickelte ich gemeinsam in einer fünfköpfigen Gruppe ein Spiel mit Greenfoot. <br><br>
+            <h2>Unser Modulplan:</h2>
 
-           Im <b>Programmierprojekt</b>, des 3. Semesters, programmierten wir in einer sechsköpfigen Gruppe eine Spielesammlung, 
-           bei der jede Person ein eigenes Spiel konzipierte und implementierte. Die einzelnen Spiele wurden so integriert, 
-           dass sie über eine gemeinsame Benutzeroberfläche in einem zentralen Fenster gestartet werden konnten.</p>
-            </div>
-        <img src="./images/Modulplan.png" alt="Modulplan Fak. 4" >
+            <p>Im Rahmen des <b>Startprojekts</b> entwickelte ich gemeinsam in einer fünfköpfigen Gruppe ein Spiel mit
+                Greenfoot. <br><br>
+
+                Im <b>Programmierprojekt</b>, des 3. Semesters, programmierten wir in einer sechsköpfigen Gruppe eine
+                Spielesammlung,
+                bei der jede Person ein eigenes Spiel konzipierte und implementierte. Die einzelnen Spiele wurden so
+                integriert,
+                dass sie über eine gemeinsame Benutzeroberfläche in einem zentralen Fenster gestartet werden konnten.
+            </p>
+        </div>
+        <img src="./images/Modulplan.png" alt="Modulplan Fak. 4">
     </section>
 
-        <section class="uni-fotos">
-            <img src="./images/uni1.jpg">
-            <img src="./images/uni2.jpg">
-            <img src="./images/uni3.jpg">
-            <img src="./images/uni4.jpg">
-            <img src="./images/uni5.jpg">
-        </section>
+    <section class="uni-fotos">
+        <img src="./images/uni1.jpg">
+        <img src="./images/uni2.jpg">
+        <img src="./images/uni3.jpg">
+        <img src="./images/uni4.jpg">
+        <img src="./images/uni5.jpg">
+    </section>
 
-        <footer>
-            <p><b>Emily Tholema</b></p>
-        </footer>
-<script>
-    const menuButton = document.getElementById("menuButton");
-    const menuDropdown = document.getElementById("menuDropdown");
+    <footer>
+        <p><b>Emily Tholema</b></p>
+    </footer>
 
-    menuButton.addEventListener("click", () => {
-        menuDropdown.classList.toggle("open");
-    });
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuDropdown = document.getElementById("menuDropdown");
 
-    document.addEventListener("click", (event) => {
-        const isClickInside = document.querySelector(".menu-container").contains(event.target);
+        menuButton.addEventListener("click", () => {
+            menuDropdown.classList.toggle("open");
+        });
 
-        if (!isClickInside) {
-            menuDropdown.classList.remove("open");
-        }
-    });
-</script>
+        document.addEventListener("click", (event) => {
+            const isClickInside = document.querySelector(".menu-container").contains(event.target);
+
+            if (!isClickInside) {
+                menuDropdown.classList.remove("open");
+            }
+        });
+    </script>
 </body>

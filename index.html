@@ -9,17 +9,17 @@
 </head>
 
 <body class="home">
-<div class="menu-container">
-    <button class="menu-button" id="menuButton" aria-label="Menü öffnen">
-        ☰
-    </button>
+    <div class="menu-container">
+        <button class="menu-button" id="menuButton" aria-label="Menü öffnen">
+            ☰
+        </button>
 
-    <div class="menu-dropdown" id="menuDropdown">
-        <a href="./lebenslauf.html">Lebenslauf</a>
-        <a href="./uni.html">Meine Hochschule</a>
-        <a href="./persönlich.html">Persönliches</a>
+        <div class="menu-dropdown" id="menuDropdown">
+            <a href="./lebenslauf.html">Lebenslauf</a>
+            <a href="./uni.html">Meine Hochschule</a>
+            <a href="./persoenlich.html">Persönliches</a>
+        </div>
     </div>
-</div>
 
     <div class="container">
         <div class="scene">
@@ -44,22 +44,22 @@
             <img src="./images/Bildschrim.png" class="screen" alt="Bildschirm">
         </div>
     </div>
-<script>
-    const menuButton = document.getElementById("menuButton");
-    const menuDropdown = document.getElementById("menuDropdown");
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuDropdown = document.getElementById("menuDropdown");
 
-    menuButton.addEventListener("click", () => {
-        menuDropdown.classList.toggle("open");
-    });
+        menuButton.addEventListener("click", () => {
+            menuDropdown.classList.toggle("open");
+        });
 
-    document.addEventListener("click", (event) => {
-        const isClickInside = document.querySelector(".menu-container").contains(event.target);
+        document.addEventListener("click", (event) => {
+            const isClickInside = document.querySelector(".menu-container").contains(event.target);
 
-        if (!isClickInside) {
-            menuDropdown.classList.remove("open");
-        }
-    });
-</script>
+            if (!isClickInside) {
+                menuDropdown.classList.remove("open");
+            }
+        });
+    </script>
 </body>
 
 
